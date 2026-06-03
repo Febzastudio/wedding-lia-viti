@@ -1,225 +1,151 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>The Wedding Of Lia & Viti</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding Of Lia & Viti</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<audio id="bgMusic" loop>
-<source src="music/romantic.mp3" type="audio/mpeg">
-</audio>
-
-<div class="cover">
-
-<div class="overlay">
-
-<h3>The Wedding Of</h3>
-
-<h1>Lia & Viti</h1>
-
-<p>08 Juni 2026</p>
-
-<div id="guestName"></div>
-
-<button onclick="openInvitation()">
-Buka Undangan
-</button>
-
-</div>
-
-</div>
-
-<section id="content">
-
-<div class="section">
-
-<h2>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
-
-<p class="quote">
-Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri agar kamu merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.
-</p>
-
-<p>
-<b>QS. Ar-Rum : 21</b>
-</p>
-
-</div>
-
-<div class="section">
-
-<h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
-
-<p class="quote">
-“Semoga Allah menghimpun yang tercerai dari keduanya dan kiranya Allah memberkati dan memberi mereka berdua keturunan yang baik, menjadikannya pembuka pintu rahmat, sumber ilmu dan hikmah, serta memberi rasa aman bagi umat.”
-</p>
-
-<br>
-
-<small>
-(Do'a Nabi Muhammad SAW pada pernikahan putrinya Fatimah Az Zahra dengan Ali bin Abi Thalib)
-</small>
-
-</div>
-
-<div class="section">
-
-<h2>Mempelai</h2>
-
-<div class="couple">
-
-<h3>Friska Wati Tolinggi</h3>
-
-<p>(Lia)</p>
-
-<p>Putri Pertama dari</p>
-
-<p>Bapak Hasan Tolinggi</p>
-<p>&</p>
-<p>Ibu Liko Ishak</p>
-
-</div>
-
-<div class="heart">❤</div>
-
-<div class="couple">
-
-<h3>Fitri Mootinelo</h3>
-
-<p>(Viti)</p>
-
-<p>Putra Kedua dari</p>
-
-<p>Bapak Ismail Mootinelo</p>
-<p>&</p>
-<p>Ibu Yusna Tahir</p>
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>Save The Date</h2>
-
-<h3>Senin, 08 Juni 2026</h3>
-
-<br>
-
-<h4>Akad Nikah</h4>
-
-<p>14.00 WITA - Selesai</p>
-
-<br>
-
-<h4>Resepsi</h4>
-
-<p>19.00 WITA - Selesai</p>
-
-</div>
-
-<div class="section">
-
-<h2>Countdown Acara</h2>
-
-<div id="countdown"></div>
-
-</div>
-
-<div class="section">
-
-<h2>Lokasi Acara</h2>
-
-<p>
-Dusun Tanjung Panik<br>
-Desa Malambe<br>
-Kecamatan Ponelo Kepulauan<br>
-Kabupaten Gorontalo Utara
-</p>
-
-<br>
-
-<a class="btn"
-href="https://maps.app.goo.gl/42cr8VVA6bMEG4RV8"
-target="_blank">
-📍 Buka Google Maps
-</a>
-
-<br><br>
-
-<iframe
-src="https://maps.google.com/maps?q=Dusun%20Tanjung%20Panik%20Desa%20Malambe%20Gorontalo%20Utara&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="100%"
-height="350"
-style="border:0;"
-loading="lazy">
-</iframe>
-
-</div>
-
-<div class="section">
-
-<h2>RSVP</h2>
-
-<p>
-Mohon konfirmasi kehadiran melalui WhatsApp
-</p>
-
-<br>
-
-<a class="btn"
-href="https://wa.me/6283839238869?text=Assalamu'alaikum,%20Saya%20akan%20hadir%20di%20acara%20pernikahan%20Lia%20dan%20Viti"
-target="_blank">
-💌 Konfirmasi Kehadiran
-</a>
-
-</div>
-
-<div class="section">
-
-<h2>Wedding Wishes</h2>
-
-<p class="quote">
-Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kedua mempelai.
-</p>
-
-<br>
-
-<h3>Lia & Viti</h3>
-
-<p>08 Juni 2026</p>
-
-</div>
-
-<div class="section">
-
-<button class="music-btn" onclick="toggleMusic()">
-🎵 Play / Pause Musik
-</button>
-
-</div>
-
-<footer>
-
-<h3>Terima Kasih</h3>
-
-<p>
-Atas doa dan restu yang diberikan kepada kami.
-</p>
-
-</footer>
-
-</section>
-
-<script src="script.js"></script>
-
+    <audio id="bgMusic" loop>
+        <source src="music/romantic.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="cover">
+        <div class="overlay">
+            <h3>The Wedding Of</h3>
+            <h1>Lia & Viti</h1>
+            <p>08 Juni 2026</p>
+            
+            <div id="guestName"></div>
+            
+            <button onclick="openInvitation()">
+                Buka Undangan
+            </button>
+        </div>
+    </div>
+
+    <section id="content">
+        
+        <div class="section">
+            <h2 class="arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
+            <p class="quote">
+                Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri agar kamu merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.
+            </p>
+            <p class="author"><b>QS. Ar-Rum : 21</b></p>
+        </div>
+
+        <div class="section">
+            <h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
+            <p class="quote">
+                “Semoga Allah menghimpun yang tercerai dari keduanya dan kiranya Allah memberkati dan memberi mereka berdua keturunan yang baik, menjadikannya pembuka pintu rahmat, sumber ilmu dan hikmah, serta memberi rasa aman bagi umat.”
+            </p>
+            <small class="sub-quote">
+                (Do'a Nabi Muhammad SAW pada pernikahan putrinya Fatimah Az Zahra dengan Ali bin Abi Thalib)
+            </small>
+        </div>
+
+        <div class="section">
+            <h2>Mempelai</h2>
+            
+            <div class="couple">
+                <h3>Friska Wati Tolinggi</h3>
+                <p class="nick">(Lia)</p>
+                <p class="parents">Putri Pertama dari</p>
+                <p class="parent-name">Bapak Hasan Tolinggi</p>
+                <p>&</p>
+                <p class="parent-name">Ibu Liko Ishak</p>
+            </div>
+
+            <div class="heart">❤</div>
+
+            <div class="couple">
+                <h3>Fitri Mootinelo</h3>
+                <p class="nick">(Viti)</p>
+                <p class="parents">Putra Kedua dari</p>
+                <p class="parent-name">Bapak Ismail Mootinelo</p>
+                <p>&</p>
+                <p class="parent-name">Ibu Yusna Tahir</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Save The Date</h2>
+            <h3 class="date-highlight">Senin, 08 Juni 2026</h3>
+            <br><br>
+            
+            <div class="event-box">
+                <h4>Akad Nikah</h4>
+                <p>14.00 WITA - Selesai</p>
+            </div>
+            <br>
+            <div class="event-box">
+                <h4>Resepsi</h4>
+                <p>19.00 WITA - Selesai</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Countdown Acara</h2>
+            <div id="countdown"></div>
+        </div>
+
+        <div class="section">
+            <h2>Lokasi Acara</h2>
+            <p class="location-text">
+                Dusun Tanjung Panik<br>
+                Desa Malambe<br>
+                Kecamatan Ponelo Kepulauan<br>
+                Kabupaten Gorontalo Utara
+            </p>
+            <br>
+            <a class="btn" href="http://maps.google.com" target="_blank">
+                📍 Buka Google Maps
+            </a>
+            <br><br>
+            <iframe
+                src="https://maps.google.com/maps?q=Dusun%20Tanjung%20Panik%20Desa%20Malambe%20Gorontalo%20Utara&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="350"
+                style="border:0; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);"
+                loading="lazy">
+             frame>
+        </div>
+
+        <div class="section">
+            <h2>RSVP</h2>
+            <p>Mohon konfirmasi kehadiran melalui WhatsApp</p>
+            <br>
+            <a class="btn" href="https://wa.me/6283839238869?text=Assalamu'alaikum,%20Saya%20akan%20hadir%20di%20acara%20pernikahan%20Lia%20dan%20Viti" target="_blank">
+                💌 Konfirmasi Kehadiran
+            </a>
+        </div>
+
+        <div class="section">
+            <h2>Wedding Wishes</h2>
+            <p class="quote">
+                Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kedua mempelai.
+            </p>
+            <br>
+            <h3 style="font-size: 2.5rem; margin-top: 10px;">Lia & Viti</h3>
+            <p>08 Juni 2026</p>
+        </div>
+
+        <button class="music-btn" onclick="toggleMusic()">
+            🎵 Musik: ON
+        </button>
+
+        <footer>
+            <h3>Terima Kasih</h3>
+            <p>Atas doa dan restu yang diberikan kepada kami.</p>
+        </footer>
+
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
