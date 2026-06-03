@@ -1,99 +1,72 @@
-const music = document.getElementById('bgMusic');
+// 1. Menampilkan Nama Tamu dari URL Parameter
+// Jika link yang disebar adalah: www.undangan.com/?to=Keluarga+Budi
+const urlParams = new URLSearchParams(window.location.search);
+const guestNameParam = urlParams.get('to');
+const guestDiv = document.getElementById('guestName');
 
-function openInvitation(){
-
-document.querySelector('.cover').style.opacity='0';
-
-setTimeout(()=>{
-
-document.querySelector('.cover').style.display='none';
-
-document.getElementById('content').style.display='block';
-
-document.getElementById('content').style.animation='fadeIn 1s ease';
-
-},500);
-
-music.play().catch(()=>{
-console.log('Autoplay diblokir browser');
-});
-
+if (guestNameParam) {
+    guestDiv.innerHTML = `<p>Kepada Yth.</p><h4>${guestNameParam}</h4>`;
+} else {
+    guestDiv.innerHTML = `<p>Kepada Yth.</p><h4>Tamu Undangan</h4>`;
 }
 
-/* Tombol Musik */
+// 2. Fungsi Membuka Undangan & Memutar Musik
+const cover = document.querySelector('.cover');
+const content = document.getElementById('content');
+const bgMusic = document.getElementById('bgMusic');
 
-function toggleMusic(){
+function openInvitation() {
+    // Memberikan efek animasi naik ke atas
+    cover.classList.add('slide-up');
+    
+    // Menampilkan konten utama
+    content.style.display = 'block';
 
-if(music.paused){
+    // Memutar musik
+    bgMusic.play().catch(error => {
+        console.log("Autoplay musik dicegah oleh browser. Pengguna harus menekan tombol play.", error);
+    });
 
-music.play();
-
-}else{
-
-music.pause();
-
+    // Menghapus elemen cover dari background setelah animasi selesai (1 detik)
+    setTimeout(() => {
+        cover.style.display = 'none';
+    }, 1000);
 }
 
+// 3. Fungsi Toggle Musik (Play / Pause)
+function toggleMusic() {
+    if (bgMusic.paused) {
+        bgMusic.play();
+    } else {
+        bgMusic.pause();
+    }
 }
 
-/* Nama Tamu dari URL */
+// 4. Hitung Mundur (Countdown) ke 08 Juni 2026, 14:00 WITA
+const targetDate = new Date("June 8, 2026 14:00:00").getTime();
 
-const params = new URLSearchParams(window.location.search);
+const countdownInterval = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
 
-const guest = params.get("to");
+    // Kalkulasi Waktu
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-if(guest){
-
-document.getElementById("guestName").innerHTML =
-
-"Kepada Yth.<br><strong>" +
-decodeURIComponent(guest) +
-"</strong>";
-
-}
-
-/* Countdown */
-
-const targetDate =
-
-new Date("June 8, 2026 14:00:00").getTime();
-
-const countdown = document.getElementById("countdown");
-
-const timer = setInterval(function(){
-
-const now = new Date().getTime();
-
-const distance = targetDate - now;
-
-if(distance < 0){
-
-clearInterval(timer);
-
-countdown.innerHTML =
-"🎉 Acara Sedang Berlangsung";
-
-return;
-
-}
-
-const days =
-Math.floor(distance / (1000*60*60*24));
-
-const hours =
-Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-
-const minutes =
-Math.floor((distance % (1000*60*60)) / (1000*60));
-
-const seconds =
-Math.floor((distance % (1000*60)) / 1000);
-
-countdown.innerHTML =
-
-days + " Hari<br>" +
-hours + " Jam<br>" +
-minutes + " Menit<br>" +
-seconds + " Detik";
-
-},1000);
+    const countdownElement = document.getElementById("countdown");
+    
+    // Tampilkan hasil
+    if (distance < 0) {
+        clearInterval(countdownInterval);
+        countdownElement.innerHTML = "<h3>Acara Sedang Berlangsung / Telah Selesai</h3>";
+    } else {
+        countdownElement.innerHTML = `
+            <div class="cd-box"><span>${days}</span><small>Hari</small></div>
+            <div class="cd-box"><span>${hours}</span><small>Jam</small></div>
+            <div class="cd-box"><span>${minutes}</span><small>Menit</small></div>
+            <div class="cd-box"><span>${seconds}</span><small>Detik</small></div>
+        `;
+    }
+}, 1000);
