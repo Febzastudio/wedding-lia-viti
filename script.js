@@ -6,15 +6,27 @@ document.getElementById('content').style.display='block';
 const music=document.getElementById('bgMusic');
 
 music.play().catch(()=>{
-console.log("Autoplay diblokir browser");
+console.log('Autoplay diblokir browser');
 });
+
+}
+
+function toggleMusic(){
+
+const music=document.getElementById('bgMusic');
+
+if(music.paused){
+music.play();
+}else{
+music.pause();
+}
 
 }
 
 const targetDate =
 new Date("June 8, 2026 14:00:00").getTime();
 
-const timer = setInterval(function(){
+setInterval(function(){
 
 const now = new Date().getTime();
 
@@ -33,9 +45,9 @@ const seconds =
 Math.floor((distance%(1000*60))/1000);
 
 document.getElementById("countdown").innerHTML =
-days+" Hari "+
-hours+" Jam "+
-minutes+" Menit "+
-seconds+" Detik";
+days + " Hari " +
+hours + " Jam " +
+minutes + " Menit " +
+seconds + " Detik";
 
 },1000);
