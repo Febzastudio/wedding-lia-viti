@@ -6,7 +6,6 @@
     <title>The Wedding Of Lia & Viti</title>
     
     <link rel="stylesheet" href="style.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,6 +13,11 @@
     <audio id="bgMusic" loop>
         <source src="music/romantic.mp3" type="audio/mpeg">
     </audio>
+
+    <ul class="bg-bubbles">
+        <li></li><li></li><li></li><li></li><li></li>
+        <li></li><li></li><li></li><li></li><li></li>
+    </ul>
 
     <div class="cover">
         <div class="overlay">
@@ -23,32 +27,12 @@
             
             <div id="guestName"></div>
             
-            <button onclick="openInvitation()">
-                Buka Undangan
-            </button>
+            <button onclick="openInvitation()">Buka Undangan</button>
         </div>
     </div>
 
     <section id="content">
         
-        <div class="section">
-            <h2 class="arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
-            <p class="quote">
-                Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri agar kamu merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.
-            </p>
-            <p class="author"><b>QS. Ar-Rum : 21</b></p>
-        </div>
-
-        <div class="section">
-            <h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
-            <p class="quote">
-                “Semoga Allah menghimpun yang tercerai dari keduanya dan kiranya Allah memberkati dan memberi mereka berdua keturunan yang baik, menjadikannya pembuka pintu rahmat, sumber ilmu dan hikmah, serta memberi rasa aman bagi umat.”
-            </p>
-            <small class="sub-quote">
-                (Do'a Nabi Muhammad SAW pada pernikahan putrinya Fatimah Az Zahra dengan Ali bin Abi Thalib)
-            </small>
-        </div>
-
         <div class="section">
             <h2>Mempelai</h2>
             
@@ -71,6 +55,24 @@
                 <p>&</p>
                 <p class="parent-name">Ibu Yusna Tahir</p>
             </div>
+        </div>
+
+        <div class="section">
+            <h2 class="arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h2>
+            <p class="quote">
+                Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri agar kamu merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.
+            </p>
+            <p class="author"><b>QS. Ar-Rum : 21</b></p>
+        </div>
+
+        <div class="section">
+            <h2>Assalamu'alaikum Warahmatullahi Wabarakatuh</h2>
+            <p class="quote">
+                “Semoga Allah menghimpun yang tercerai dari keduanya dan kiranya Allah memberkati dan memberi mereka berdua keturunan yang baik, menjadikannya pembuka pintu rahmat, sumber ilmu dan hikmah, serta memberi rasa aman bagi umat.”
+            </p>
+            <small class="sub-quote">
+                (Do'a Nabi Muhammad SAW pada pernikahan putrinya Fatimah Az Zahra dengan Ali bin Abi Thalib)
+            </small>
         </div>
 
         <div class="section">
@@ -111,9 +113,9 @@
                 src="https://maps.google.com/maps?q=Dusun%20Tanjung%20Panik%20Desa%20Malambe%20Gorontalo%20Utara&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="350"
-                style="border:0; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);"
+                style="border:0; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);"
                 loading="lazy">
-             frame>
+            </iframe>
         </div>
 
         <div class="section">
@@ -135,9 +137,7 @@
             <p>08 Juni 2026</p>
         </div>
 
-        <button class="music-btn" onclick="toggleMusic()">
-            🎵 Musik: ON
-        </button>
+        <button class="music-btn" onclick="toggleMusic()">🎵 Musik: ON</button>
 
         <footer>
             <h3>Terima Kasih</h3>
